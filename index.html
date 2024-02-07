@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>TheBigQuestion</title>
+  <style>
+    .background {
+        background-color: #28CECE;
+        padding: 20px;
+    }
+
+    #noButton {
+        position: absolute;
+    }
+
+    .picture {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        padding-top: 10px;
+        border-radius: 50%;
+    }
+
+    .title {
+        text-align: center;
+        padding-top: 100px;
+    }
+
+    .button-33 {
+        background-color: #c2fbd7;
+        border-radius: 100px;
+        box-shadow: rgba(243, 131, 215, 0.2) 0 -25px 18px -14px inset,rgba(243, 131, 215, 0.2) 0 1px 2px,rgba(243, 131, 215, 0.2) 0 2px 4px,rgba(243, 131, 215, 0.2) 0 4px 8px,rgba(243, 131, 215, 0.2) 0 8px 16px,rgba(243, 131, 215, 0.2) 0 16px 32px;
+        color: #d54d7b;
+        cursor: pointer;
+        display: inline-block;
+        font-family: "Great Vibes", cursive; 
+        padding: 7px 20px;
+        text-align: center;
+        text-decoration: none;
+        transition: all 250ms;
+        border: 0;
+        font-size: 30px;
+        user-select: none;
+        -webkit-user-select: none;
+        touch-action: manipulation;
+        margin-right:30px;
+    }
+
+    .button-33:hover {
+        box-shadow: rgba(243, 131, 215, 0.2) 0 -25px 18px -14px inset,rgba(243, 131, 215, 0.2) 0 1px 2px,rgba(243, 131, 215, 0.2) 0 2px 4px,rgba(243, 131, 215, 0.2) 0 4px 8px,rgba(243, 131, 215, 0.2) 0 8px 16px,rgba(243, 131, 215, 0.2) 0 16px 32px;
+        transform: scale(1.05) rotate(-1deg);
+    }
+
+    .button-container {
+        text-align: center;
+        margin-right: 60px;
+        margin-bottom:20px;
+    }
+
+    .h1 {
+        color: #d54d7b; 
+        font-family: "Great Vibes", cursive; 
+        font-size: 100px; 
+        line-height: 160px; 
+        font-weight: normal; 
+        margin-bottom: 0px; 
+        margin-top: 40px; 
+        text-align: center; 
+        text-shadow: 0 1px 1px #fff; 
+    }
+  </style>
+</head>
+<body class="background">
+  <div class="container">
+    <div class="title">
+      <h1 class="h1">Will you be my Girlfriend?</h1>
+    </div>
+    <div class="button-container">
+        <button class="button-33" id="yesButton" onclick="nextPage()">Yes</button>
+        <button class="button-33" id="noButton" onmouseover="moveButton()">No</button>
+    </div>
+    <img src="https://media1.tenor.com/m/HPht2t341E8AAAAC/puppy-dog-eyes-sad.gif" class="picture">
+  </div>
+  <script>
+    function nextPage() {
+      window.location.href = "yes.html";
+    }
+
+    function moveButton() { 
+      var button = document.getElementById("noButton"); 
+      var pageWidth = window.innerWidth - button.offsetWidth - 40; 
+      var pageHeight = window.innerHeight - button.offsetHeight - 40; 
+      var newX = Math.floor(Math.random() * pageWidth); 
+      var newY = Math.floor(Math.random() * pageHeight); 
+      button.style.left = newX + "px"; 
+      button.style.top = newY + "px"; 
+    } 
+  </script>
+</body>
+</html>
